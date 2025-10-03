@@ -1,15 +1,35 @@
 # time-series-analysis
-Time series analysis extracts patterns from temporal data to forecast future values, identify trends, detect anomalies, and understand seasonal behavior. It powers forecasting in finance, sales, weather, and resource planning using statistical and ML models.
+# Monthly Milk Production Forecasting 🥛
 
-In this experiment, we use time series analysis technique to decompose our data into 3 components like the below:
+A beginner-friendly time series analysis project that forecasts monthly milk production using ARIMA modeling.
 
-1-Trend (T)
-2-Seasonility (S)
-3-Residual (R)
-Once we need to get a statinory dataset before performing Time Series Analysis (TSA) flawlessly beacuse it would be easy making a predicition over a stationary dataset since it would already satisfy the preoperties of Normal Distribution in terms of mean and variance, roughly. So, we need to delve into the raw dataset by applying some EDA techniques to expose valuable insight of data related to trend, and seasonility if it is possible to observe in EDA. After we complete data analyis stage, we need to pick best available techniques (e.g ARIMA, SARIMAX) to perform on the dataset according to our knowledge we would get in EDA.
+## 📊 Project Overview
 
-In EDA stage, we will be applying a bunch of techniques such as, boxploting, rolling statictics (mean, std) by time based features (year, month, day, weekday and quarter) to find out 2 components (trend, seasonility) out of 3 time series components over specific plots, rougly. Those plots will give reasonable feedback for TSA before starting it.
+This project demonstrates fundamental time series analysis techniques:
+- Exploratory Data Analysis (EDA) for time series
+- Trend and Seasonality decomposition
+- Stationarity testing
+- ARIMA model building and forecasting
 
-In TSA stage, we will build different models for non-seasonal and seasonal approahes by using ARIMA and SARIMAX in statsmodels package, respectively.
+## 🛠️ Techniques Used
 
-Since the most challenging parts of TSA is finding optimum parameters (p,d,q) and (P,D,Q,S) of those techniques, we will be referring to Autocorrelation (ACF) and Partial Autocorrelation (PACF) functions to find out significant time correlations in terms of performing either Autoregression Model (AR) or Moving Average Model (MA), or Seanosal Autoregression (SAR) and Moving Average (SAM).
+- **Time Series Decomposition**: Trend, Seasonality, Residual
+- **Stationarity Testing**: Augmented Dickey-Fuller test
+- **Model**: ARIMA (AutoRegressive Integrated Moving Average)
+- **Evaluation**: Train-Test split, RMSE metric
+
+## 📈 Results
+
+The ARIMA model successfully captures the seasonal pattern in milk production and provides reasonable forecasts for future months.
+
+## 🚀 Quick Start
+
+1. Clone this repository
+2. Install requirements: `pip install -r requirements.txt`
+3. Run the Jupyter notebook: `jupyter notebook milk_forecast.ipynb`
+
+## 📁 Files
+
+- `milk_forecast.ipynb` - Main analysis notebook
+- `requirements.txt` - Python dependencies
+- `README.md` - This file
